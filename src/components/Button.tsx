@@ -25,7 +25,7 @@ export const Button: React.FC<ButtonProps> = ({ variant = 'primary', ...props })
       break;
   }
 
-  _style.padding = '5px 10px';
+  _style.padding = '5px 35px';
 
   return (
     <button style={_style} {...props}>{children}</button>

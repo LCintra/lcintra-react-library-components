@@ -1,14 +1,14 @@
 {
-  "name": "component-library",
-  "version": "1.0.0",
+  "name": "lcintra-component-library",
+  "version": "1.0.1",
   "description": "",
-  "main": "dist/cjs/index.js",
+  "main": "dist/cjs/src/components/index.js",
   "module": "dist/esm/index.js",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "rm -rf /dist && npm run build:esm && npm run build:cjs",
+    "build": "SET NODE_OPTIONS=--openssl-legacy-provider && rm -rf /dist && npm run build:esm && npm run build:cjs",
     "build:esm": "tsc",
     "build:cjs": "tsc --module CommonJS --outDir dist/cjs",
     "storybook": "start-storybook -p 6006",
