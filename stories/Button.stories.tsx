@@ -1,23 +1,22 @@
-import { Button } from '../src'
-import { ComponentStory } from '@storybook/react';
 import React from 'react';
+import {Button} from '../src/components/Button';
 
 export default {
-  title: 'My Component/Button',
-  component: Button
-}
-
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
-
-const PrimaryButton = Template.bind({});
-
-PrimaryButton.args = {
-  variant: 'primary',
-};
-
-export const Primary = {
-  args: {
-    variant: 'primary',
-    children: 'My First Button'
+  title: 'Components/common/Button',
+  component: Button,
+  argTypes: {
+    disabled: {
+      control: 'boolean',
+      defaultValue: false,
+    },
+    label: {
+      control: 'text',
+      defaultValue: 'Button text',
+    },
+    onClick: {
+      action: 'onClick',
+    },
   },
 };
+
+export const Default = args => <Button {...args} />;
