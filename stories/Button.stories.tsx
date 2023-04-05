@@ -16,6 +16,11 @@ export default {
     onClick: {
       action: 'onClick',
     },
+    type: {
+      control: { type: 'select' },
+      options: ['primary', 'secondary'],
+      defaultValue: 'primary',
+    },
   },
 };
 
